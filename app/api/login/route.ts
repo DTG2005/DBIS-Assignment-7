@@ -3,8 +3,6 @@ import { NextRequest, NextResponse } from "next/server";
 import { db } from "../../../lib/db";
 import bcrypt from "bcryptjs";
 import { RowDataPacket, FieldPacket } from "mysql2";
-import { redirect } from "next/navigation";
-import { useRouter } from "next/router";
 
 interface User {
   mobile: string;

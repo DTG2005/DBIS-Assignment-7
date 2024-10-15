@@ -14,10 +14,13 @@ export async function POST(req: NextRequest) {
     const emailValue = email === undefined ? null : email;
     const passwordValue = password ? await bcrypt.hash(password, 10) : null;
 
+    const createTableQuery =
+      "CREATE TABLE IF NOT EXISTS users (mobile VARCHAR(20), email VARCHAR(255), passwordValue VARCHAR(255))";
+    await db.execute(createTableQuery);
+
     const query =
       "INSERT INTO users (mobile, email, passwordValue) VALUES (?, ?, ?)";
     const values = [mobileValue, emailValue, passwordValue];
-
     await db.execute(query, values);
 
     return NextResponse.json(
