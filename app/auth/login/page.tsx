@@ -20,7 +20,7 @@ export default function Login() {
   const handleSubmit = async (e: FormEvent) => {
     e.preventDefault();
     try {
-      const res = await fetch("/api/login", {
+      const res = await fetch("/DBIS-Assignment-7/api/login", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(formData),
@@ -29,7 +29,7 @@ export default function Login() {
       const data = await res.json();
       if (res.ok) {
         alert(data.message);
-        window.location.href = "/dashboard";
+        window.location.href = "/DBIS-Assignment-7/dashboard";
       } else {
         alert(data.error);
       }

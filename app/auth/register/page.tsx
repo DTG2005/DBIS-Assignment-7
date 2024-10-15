@@ -16,7 +16,7 @@ const RegisterPage = () => {
   const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
     try {
-      const response = await fetch("/api/register", {
+      const response = await fetch("/DBIS-Assignment-7/api/register", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -29,7 +29,7 @@ const RegisterPage = () => {
       });
       if (response.ok) {
         const data = await response.json();
-        window.location.href = "/";
+        window.location.href = "/DBIS-Assignment-7/";
         alert(data.message);
       } else {
         const error = await response.json();

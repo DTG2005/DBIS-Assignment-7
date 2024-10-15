@@ -11,7 +11,7 @@ export default function Home() {
         <div className="flex items-center justify-center">
           <div className="border-2 border-white rounded-full p-2">
             <a
-              href="/auth/register"
+              href="/DBIS-Assignment-7/auth/register"
               className="text-2xl font-bold transition duration-300 ease-in-out"
             >
               <div className="hover:bg-slate-500 hover:text-white active:bg-slate-700 active:text-white p-2 rounded-full">
@@ -21,7 +21,7 @@ export default function Home() {
           </div>
           <div className="border-2 border-white rounded-full p-2">
             <a
-              href="/auth/login"
+              href="/DBIS-Assignment-7/auth/login"
               className="text-2xl font-bold transition duration-300 ease-in-out"
             >
               <div className="hover:bg-slate-500 hover:text-white active:bg-slate-700 active:text-white p-2 rounded-full">
