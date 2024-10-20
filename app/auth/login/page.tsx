@@ -29,7 +29,7 @@ export default function Login() {
       const data = await res.json();
       if (res.ok) {
         alert(data.message);
-        window.location.href = "/DBIS-Assignment-7/dashboard";
+        window.location.href = "/dashboard";
       } else {
         alert(data.error);
       }
